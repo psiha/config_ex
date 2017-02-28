@@ -31,20 +31,15 @@
     // http://gcc.gnu.org/bugzilla/show_bug.cgi?id=41201
     // http://gcc.gnu.org/bugzilla/show_bug.cgi?id=52144
     #define BOOST_OPTIMIZE_FOR_SPEED_BEGIN()  \
-        _Pragma( "push" )                     \
         _Pragma( "GCC push_options"        )  \
         _Pragma( "GCC optimize ( \"O3\" )" )  \
-        _Pragma( "arm" )
 
     #define BOOST_OPTIMIZE_FOR_SPEED_END() \
         _Pragma( "GCC pop_options" )       \
-        _Pragma( "pop" )
 
     #define BOOST_OPTIMIZE_FOR_SIZE_BEGIN()  \
-        _Pragma( "push" )                    \
         _Pragma( "GCC push_options"        ) \
         _Pragma( "GCC optimize ( \"Os\" )" ) \
-        _Pragma( "thumb" )
 
     #define BOOST_OPTIMIZE_FOR_SIZE_END BOOST_OPTIMIZE_FOR_SPEED_END
 
