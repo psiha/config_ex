@@ -22,6 +22,8 @@
 #   define BOOST_FINAL    final
 #endif
 
+#define BOOST_MINSIZE optimize( s )
+
 #ifdef __i386__
 #   undef  BOOST_CC_REG
 #   define BOOST_CC_REG __attribute__(( regparm( 3 ), stdcall, sseregparm ))

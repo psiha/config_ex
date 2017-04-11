@@ -99,6 +99,10 @@
 #   define BOOST_ATTRIBUTES( attribs )
 #endif // BOOST_ATTRIBUTES
 
+#ifndef BOOST_MINSIZE
+#   define BOOST_MINSIZE
+#endif // BOOST_MINSIZE
+
 #ifdef BOOST_MAY_ALIAS
 #   define BOOST_HAS_MAY_ALIAS
 #endif // BOOST_MAY_ALIAS
