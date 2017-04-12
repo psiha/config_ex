@@ -6,7 +6,7 @@
 /// Definitions shared between GCC and its 'compatibles'/'emulators' (e.g.
 /// Clang)
 ///
-/// (c) Copyright Domagoj Saric 2015 - 2016.
+/// (c) Copyright Domagoj Saric 2015 - 2017.
 ///
 ///  Use, modification and distribution are subject to the
 ///  Boost Software License, Version 1.0. (See accompanying file

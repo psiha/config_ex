@@ -5,7 +5,7 @@
 ///
 /// Boost.Config wrappers/extensions
 ///
-/// (c) Copyright Domagoj Saric 2016.
+/// (c) Copyright Domagoj Saric 2016 - 2017.
 ///
 ///  Use, modification and distribution are subject to the
 ///  Boost Software License, Version 1.0. (See accompanying file
@@ -22,7 +22,7 @@
 #   define BOOST_FINAL    final
 #endif
 
-#define BOOST_MINSIZE optimize( s )
+#define BOOST_MINSIZE optimize( "Os" )
 
 #ifdef __i386__
 #   undef  BOOST_CC_REG
