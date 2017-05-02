@@ -56,7 +56,7 @@
 #define BOOST_HAS_UNION_TYPE_PUNNING_TRICK
 
 #define BOOST_OVERRIDABLE_SYMBOL        extern __attribute__(( weak ))
-#define BOOST_OVERRIDABLE_MEMBER_SYMBOL BOOST_OVERRIDABLE_SYMBOL
+#define BOOST_OVERRIDABLE_MEMBER_SYMBOL __attribute__(( weak ))
 #define BOOST_OVERRIDABLE_FUNCTION      BOOST_OVERRIDABLE_SYMBOL
 
 //------------------------------------------------------------------------------
