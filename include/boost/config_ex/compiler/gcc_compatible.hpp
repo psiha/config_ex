@@ -6,7 +6,7 @@
 /// Definitions shared between GCC and its 'compatibles'/'emulators' (e.g.
 /// Clang)
 ///
-/// (c) Copyright Domagoj Saric 2015 - 2016.
+/// (c) Copyright Domagoj Saric 2015 - 2017.
 ///
 ///  Use, modification and distribution are subject to the
 ///  Boost Software License, Version 1.0. (See accompanying file
@@ -56,7 +56,7 @@
 #define BOOST_HAS_UNION_TYPE_PUNNING_TRICK
 
 #define BOOST_OVERRIDABLE_SYMBOL        extern __attribute__(( weak ))
-#define BOOST_OVERRIDABLE_MEMBER_SYMBOL BOOST_OVERRIDABLE_SYMBOL
+#define BOOST_OVERRIDABLE_MEMBER_SYMBOL __attribute__(( weak ))
 #define BOOST_OVERRIDABLE_FUNCTION      BOOST_OVERRIDABLE_SYMBOL
 
 //------------------------------------------------------------------------------

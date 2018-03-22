@@ -22,6 +22,8 @@
 #define BOOST_OVERRIDE override
 #define BOOST_FINAL    final
 
+#define BOOST_MINSIZE minsize
+
 // Requires -fms-extensions
 #if __has_declspec_attribute( novtable )
     #define BOOST_NOVTABLE __declspec( novtable )
