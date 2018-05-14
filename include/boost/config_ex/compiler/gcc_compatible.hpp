@@ -51,7 +51,9 @@
 
 #define BOOST_RESTRICTED __restrict__
 
+#ifndef BOOST_MAY_ALIAS
 #define BOOST_MAY_ALIAS __attribute__(( may_alias ))
+#endif
 
 #define BOOST_HAS_UNION_TYPE_PUNNING_TRICK
 
