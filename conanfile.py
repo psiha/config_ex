@@ -1,7 +1,7 @@
 from conans import ConanFile, CMake, tools
 
 
-class ConcurrentqueueConan(ConanFile):
+class ConfigExConan(ConanFile):
     name = "ConfigEx"
     version = "1.0.0"
     requires = 'boost/[>=1.67]@conan/stable'
