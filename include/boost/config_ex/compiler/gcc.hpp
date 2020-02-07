@@ -17,11 +17,6 @@
 
 #include "gcc_compatible.hpp"
 
-#if ( ( __GNUC__ * 10 ) + __GNUC_MINOR__ ) >= 47
-#   define BOOST_OVERRIDE override
-#   define BOOST_FINAL    final
-#endif
-
 #define BOOST_MINSIZE optimize( "Os" )
 
 #ifdef __i386__

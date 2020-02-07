@@ -19,9 +19,6 @@
 #   define BOOST_ASSUME_UNCHECKED( condition ) __builtin_assume( condition )
 #endif
 
-#define BOOST_OVERRIDE override
-#define BOOST_FINAL    final
-
 #define BOOST_MINSIZE minsize
 
 // Requires -fms-extensions

@@ -34,11 +34,6 @@
 #define BOOST_DEFAULT_CASE_UNREACHABLE_UNCHECKED() default:                                                                  BOOST_UNREACHABLE_UNCHECKED(); break
 #define BOOST_DEFAULT_CASE_UNREACHABLE()           default: BOOST_ASSERT_MSG( false, "Unexpected: default case executed!" ); BOOST_UNREACHABLE_UNCHECKED(); break
 
-#ifndef BOOST_OVERRIDE
-#   define BOOST_OVERRIDE
-#   define BOOST_FINAL
-#endif // BOOST_OVERRIDE
-
 #ifndef BOOST_NOVTABLE
 #   define BOOST_NOVTABLE
 #endif // BOOST_NOVTABLE
