@@ -36,8 +36,11 @@
 
 #ifndef BOOST_OVERRIDE
 #   define BOOST_OVERRIDE
-#   define BOOST_FINAL
 #endif // BOOST_OVERRIDE
+
+#ifndef BOOST_FINAL
+#   define BOOST_FINAL
+#endif // BOOST_FINAL
 
 #ifndef BOOST_NOVTABLE
 #   define BOOST_NOVTABLE
