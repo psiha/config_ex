@@ -29,7 +29,10 @@
     #define BOOST_NOVTABLE __declspec( novtable )
 #endif
 
-#if defined( __SSE2__ ) && __has_attribute( vectorcall )
+#if defined( __linux__ )  // dubious linker failures with vectorcall on linux SO builds
+#   undef  BOOST_CC_REG
+#   define BOOST_CC_REG __attribute__(( regcall ))
+#else
 #   undef  BOOST_CC_REG
 #   define BOOST_CC_REG __attribute__(( vectorcall ))
 #endif
