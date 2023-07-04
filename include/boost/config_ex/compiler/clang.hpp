@@ -34,7 +34,10 @@
 #   define BOOST_CC_REG __attribute__(( regcall ))
 #else
 #   undef  BOOST_CC_REG
+// vectorcall not supported on ARM/ARM64
+#if defined( __i386__ ) || defined( __x86_64__ )
 #   define BOOST_CC_REG __attribute__(( vectorcall ))
+#endif
 #endif
 
 // No support for fast-math and size<->speed optimisation macros/pragmas yet...
