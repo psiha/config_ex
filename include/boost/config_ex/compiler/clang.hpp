@@ -31,7 +31,10 @@
 
 #if defined( __linux__ )  // dubious linker failures with vectorcall on linux SO builds
 #   undef  BOOST_CC_REG
+// regcall not supported on ARM/ARM64
+#if defined( __i386__ ) || defined( __x86_64__ )
 #   define BOOST_CC_REG __attribute__(( regcall ))
+#endif
 #else
 #   undef  BOOST_CC_REG
 // vectorcall not supported on ARM/ARM64
