@@ -51,8 +51,6 @@
 
 #define BOOST_RESTRICTED __restrict__
 
-#define BOOST_MAY_ALIAS __attribute__(( may_alias ))
-
 #define BOOST_HAS_UNION_TYPE_PUNNING_TRICK
 
 #define BOOST_OVERRIDABLE_SYMBOL        extern __attribute__(( weak ))
