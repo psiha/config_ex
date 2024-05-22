@@ -43,7 +43,14 @@
 #   define BOOST_CC_STACK    BOOST_CC_STDCALL
 #   define BOOST_CC_REG_ABI  __attribute__(( regparm( 3 ), stdcall ))
 #   define BOOST_CC_REG      BOOST_CC_REG_ABI
-#endif
+#endif // __i386__
+
+#ifdef __x86_64__
+#ifdef _WIN32
+#   define BOOST_CC_FASTCALL __attribute__(( sysv_abi ))
+#   define BOOST_CC_REG_ABI  __attribute__(( sysv_abi ))
+#endif // Windows
+#endif // __x86_64__
 
 #define BOOST_NOTHROW_LITE __attribute__(( nothrow ))
 

@@ -12,7 +12,7 @@
 
 
 #ifndef __has_declspec_attribute
-#   define __has_declspec_attribute(x) 0
+#   define __has_declspec_attribute( x ) 0
 #endif
 
 #if __has_builtin( __builtin_assume )
@@ -24,11 +24,6 @@
 // Requires -fms-extensions
 #if __has_declspec_attribute( novtable )
     #define BOOST_NOVTABLE __declspec( novtable )
-#endif
-
-#if defined( __SSE2__ ) && __has_attribute( vectorcall )
-#   undef  BOOST_CC_REG
-#   define BOOST_CC_REG __attribute__(( vectorcall ))
 #endif
 
 // No support for fast-math and size<->speed optimisation macros/pragmas yet...
