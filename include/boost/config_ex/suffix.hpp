@@ -28,8 +28,11 @@
 #endif // BOOST_UNREACHABLE_UNCHECKED
 
 
-#define BOOST_UNREACHABLE(      ) BOOST_ASSERT_MSG( false    , "This code should not be reached!" ); BOOST_UNREACHABLE_UNCHECKED()
-#define BOOST_ASSUME( condition ) BOOST_ASSERT_MSG( condition, "Assumption broken!"               ); BOOST_ASSUME_UNCHECKED( condition )
+// Each is ONE statement, so that it can be the body of an unbraced if/else: as
+// two, `if ( c ) BOOST_ASSUME( x );` guarded only the assertion and applied the
+// assumption unconditionally.
+#define BOOST_UNREACHABLE(      ) do { BOOST_ASSERT_MSG( false    , "This code should not be reached!" ); BOOST_UNREACHABLE_UNCHECKED(); } while ( 0 )
+#define BOOST_ASSUME( condition ) do { BOOST_ASSERT_MSG( condition, "Assumption broken!"               ); BOOST_ASSUME_UNCHECKED( condition ); } while ( 0 )
 
 #define BOOST_DEFAULT_CASE_UNREACHABLE_UNCHECKED() default:                                                                  BOOST_UNREACHABLE_UNCHECKED(); break
 #define BOOST_DEFAULT_CASE_UNREACHABLE()           default: BOOST_ASSERT_MSG( false, "Unexpected: default case executed!" ); BOOST_UNREACHABLE_UNCHECKED(); break
